@@ -1,4 +1,6 @@
-# z-ui
+# z-ui --- 一个基于 vue 的轻量级 UI组件库
+
+## 作者：刘文灼
 
 ## Project setup
 ```
