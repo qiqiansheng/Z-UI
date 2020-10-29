@@ -1,0 +1,23 @@
+{
+  "name": "z-ui",
+  "version": "0.0.1",
+  "description": "vue,ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiqiansheng/Z-UI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "liuwenzhuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiqiansheng/Z-UI/issues"
+  },
+  "homepage": "https://github.com/qiqiansheng/Z-UI#readme"
+}
