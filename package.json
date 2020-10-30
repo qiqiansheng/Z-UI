@@ -1,13 +1,15 @@
 {
-  "name": "z-ui",
-  "version": "0.1.0",
+  "name": "zeal-ui",
+  "version": "0.0.1",
+  "description": "vue,ui",
+  "main": "./package/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -17,11 +19,27 @@
     "node-sass": "^4.14.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vue": "^2.6.11",
+    "core-js": "^3.6.5"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiqiansheng/Z-UI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "liuwenzhuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiqiansheng/Z-UI/issues"
+  },
+  "homepage": "https://github.com/qiqiansheng/Z-UI#readme"
 }
