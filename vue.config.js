@@ -8,11 +8,13 @@ module.exports = {
   },
   chainWebpack:config => {
     config.module
-      .rule('js')
-      .include
-        .add('/package')
-        .end()
-      .use('babel')
-        .loader('babel-loader')
+    .rule('md')
+    .test(/\.md$/)
+    .use('html-loader')
+    .loader('html-loader')
+    .end()
+    .use('markdown-loader')
+    .loader('markdown-loader')
+    .end()
   }
 }
