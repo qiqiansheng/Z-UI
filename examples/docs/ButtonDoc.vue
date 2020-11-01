@@ -1,8 +1,8 @@
 <template>
   <div class="Button">
-    <demo :component='ButtonDemo' title="基础用法" description='Button基础用法' :code='code0'/>
-    <demo :component='ButtonDemo1' title="圆角" description='添加 round 属性设置圆角按钮' :code='code1'/>
-    <demo :component='ButtonDemo2' title="禁用" description='添加 disabled 属性设置按钮禁用' :code='code2'/>
+    <demo :component='ButtonDemo' title="基础用法" description='添加 type 属性设置不同种类Button' :code='code0' codetype='language-html'/>
+    <demo :component='ButtonDemo1' title="圆角" description='添加 round 属性设置圆角按钮' :code='code1' codetype='language-html'/>
+    <demo :component='ButtonDemo2' title="禁用" description='添加 disabled 属性设置按钮禁用' :code='code2' codetype='language-html'/>
     <attribution :data="data"/>
   </div>
 </template>

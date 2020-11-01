@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
     <!--展示代码的地方-->
-    <code-preview ref="codePer" :component="component" :code='code'></code-preview>
+    <code-preview ref="codePer" :component="component" :code='code' :codetype='codetype'></code-preview>
   </div>
 </template>
 
@@ -28,6 +28,9 @@ export default {
       type: Object,
     },
     code:{
+      type:String
+    },
+    codetype:{
       type:String
     }
   },

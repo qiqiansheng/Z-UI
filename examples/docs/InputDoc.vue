@@ -1,9 +1,9 @@
 <template>
   <div class="InputDoc">
-    <demo :component='InputDemo' title="基础用法" description='Input基础用法' :code='code0'/>
-    <demo :component='InputDemo1' title="可清空" description='添加 clearable 属性设置Input可清空' :code='code1'/>
-    <demo :component='InputDemo2' title="文本域" description='设置 type 属性' :code='code2'/>
-    <demo :component='InputDemo3' title="支持v-model" description='Input支持 v-model 双向绑定' :code='code3'/>
+    <demo :component='InputDemo' title="基础用法" description='Input基础用法' :code='code0' codetype='language-html'/>
+    <demo :component='InputDemo1' title="可清空" description='添加 clearable 属性设置Input可清空' :code='code1' codetype='language-html'/>
+    <demo :component='InputDemo2' title="文本域" description='设置 type 属性' :code='code2' codetype='language-html'/>
+    <demo :component='InputDemo3' title="支持v-model" description='Input支持 v-model 双向绑定' :code='code3' codetype='language-html'/>
     <attribution :data='data'/>
   </div>
 </template>

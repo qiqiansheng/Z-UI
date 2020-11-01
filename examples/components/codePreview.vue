@@ -6,7 +6,7 @@
     <div class="per-wrapper">
       <transition name="code">
         <div class="per-content" v-show="showCode">
-          <pre ref="codePer" class="language-html"><code class="language-html">{{code}}</code></pre>
+          <pre ref="codePer" :class="codetype"><code :class="codetype">{{code}}</code></pre>
         </div>
       </transition>
       <div class="demo-block-control" @click="toggle">
@@ -24,6 +24,9 @@ export default {
       type: Object
     },
     code:{
+      type:String
+    },
+    codetype:{
       type:String
     }
     
