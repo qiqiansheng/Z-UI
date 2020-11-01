@@ -1,75 +1,102 @@
 <template>
-  <div class="Button">
-  <attribution :data="data"/>
+  <div>
+    <demo :component='MessageDemo' title="基础用法 " description='Message基础用法 (传入一个配置对象 , 配置属性见下表)' :code='code0' codetype='language-javascript'/>
+    <demo :component='MessageDemo1' title="指定类型" description='传入一个具有 type 属性的对象指定 Message 的类型' :code='code1' codetype='language-javascript'/>
+    <demo :component='MessageDemo2' title="停留时间" description='传入一个具有 duration 属性的对象指定 Message 停留的时间' :code='code2' codetype='language-javascript'/>
+    <attribution :data="data"/>
   </div>
 </template>
 
 <script>
 import demo from '../components/demo'
 import attribution from '../components/attribution';
-import ButtonDemo from '../components/ButtonDemo'
-import ButtonDemo1 from '../components/ButtonDemo1'
-import ButtonDemo2 from '../components/ButtonDemo2'
+import MessageDemo from '../components/MessageDemo'
+import MessageDemo1 from '../components/MessageDemo1'
+import MessageDemo2 from '../components/MessageDemo2'
 
 export default {
   components:{
     demo,
-    ButtonDemo,
-    ButtonDemo1,
-    ButtonDemo2,
-    attribution
+    attribution,
+    MessageDemo,
+    MessageDemo1,
+    MessageDemo2
   },
   data() {
     return {
-      code0:`
-<z-button type='normal'>默认按钮</z-button>
-<z-button type='primary'>主要按钮</z-button>
-<z-button type='success'>成功按钮</z-button>
-<z-button type='danger'>危险按钮</z-button>
-<z-button type='info'>提示按钮</z-button>
-<z-button type='warning'>警告按钮</z-button>
+      MessageDemo,
+      MessageDemo1,
+      MessageDemo2,
+      code0:`<z-button @click="show">默认提示</z-button>
+
+export default {
+  methods: {
+    show(){
+      this.$message()
+    }
+  },
+}
      `,
-      code1:`
-<z-button round>默认按钮</z-button>
-<z-button type='primary' round>主要按钮</z-button>
-<z-button type='success' round>成功按钮</z-button>
-<z-button type='danger' round>危险按钮</z-button>
-<z-button type='info' round>提示按钮</z-button>
-<z-button type='warning' round>警告按钮</z-button>
-      `,
-      code2:`
-<z-button disabled>默认按钮</z-button>
-<z-button type='primary' disabled>主要按钮</z-button>
-<z-button type='success' disabled>成功按钮</z-button>
-<z-button type='danger' disabled>危险按钮</z-button>
-<z-button type='info' disabled>提示按钮</z-button>
-<z-button type='warning' disabled>警告按钮</z-button>
-      `,
-      ButtonDemo,
-      ButtonDemo1,
-      ButtonDemo2,
+      code1:`<z-button @click="showInfo">默认提示</z-button>
+<z-button @click="showSuccess">成功提示</z-button>
+<z-button @click="showWarning">警告提示</z-button>
+<z-button @click="showError">错误提示</z-button>
+      
+export default {
+  methods: {
+    showInfo(){
+      this.$message()
+    },
+    showSuccess(){
+      this.$message({type:'success',message:'成功啦！'})
+    },
+    showWarning(){
+      this.$message({type:'warning',message:'警告哦~'})
+    },
+    showError(){
+      this.$message({type:'error',message:'出错了……'})
+    },
+  },
+}`,
+      code2:`<z-button class='buttonDemo' @click="showInfo">停留1秒</z-button>
+<z-button class='buttonDemo' @click="showSuccess">停留2秒</z-button>
+<z-button class='buttonDemo' @click="showWarning">停留3秒</z-button>
+
+export default {
+  methods: {
+    showInfo(){
+      this.$message({duration:1000,message:'我停留了1秒'})
+    },
+    showSuccess(){
+      this.$message({duration:2000,message:'我停留了2秒'})
+    },
+    showWarning(){
+      this.$message({duration:3000,message:'我停留了3秒'})
+    }
+  },
+}`,
       data:[
         {
           params: 'type',
           desc: '类型',
           type: 'String',
-          select: 'normal , primary , success , danger , info , warning',
-          default: 'normal',
+          select: 'info , success , warning , error',
+          default: 'info',
         },
         {
-          params: 'round',
-          desc: '圆角',
-          type: 'Boolean',
-          select: 'true , false',
-          default: 'false',
+          params: 'message',
+          desc: '提示文字',
+          type: 'String',
+          select: '',
+          default: '这是一条提示',
         },
         {
-          params: 'disabled',
-          desc: '禁用',
-          type: 'Boolean',
-          select: 'true , false',
-          default: 'false',
-        },
+          params: 'duration',
+          desc: '停留时间',
+          type: 'Number',
+          select: '',
+          default: '3000 ms',
+        }
       ]
     }
   },

@@ -23,11 +23,12 @@ new Vue({
     ><code class="language-javascript">// main.js
 import Vue from 'vue';
 import App from './App.vue';
-import { Button,Input } from 'zeal-ui';
+import { Button,Input,Message } from 'zeal-ui';
 
 Vue.use(Button);
 Vue.use(Input);
-
+// Message 组件为一个函数,把它挂载Vue原型上,即可通过 this.$message 调用
+Vue.prototype.$message = Message
 new Vue({
   el: '#app',
   render: h => h(App)

@@ -6,7 +6,7 @@
       <p>一款基于 Vue 的轻量级 UI 组件库</p>
       <ul>
         <li><router-link to="">Gitee</router-link></li>
-        <li><router-link to="">Github</router-link></li>
+        <li><a href="https://github.com/qiqiansheng/Zeal-UI">Github</a></li>
         <li><router-link to="/Doc">Get Start</router-link></li>
       </ul>
     </div>
