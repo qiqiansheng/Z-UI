@@ -3,47 +3,50 @@
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
     <!--展示代码的地方-->
-    <code-preview ref="codePer" :component="component"></code-preview>
+    <code-preview ref="codePer" :component="component" :code='code'></code-preview>
   </div>
 </template>
 
-<script lang="ts">
-import CodePreview from "./codePreview.vue";
+<script>
+import CodePreview from "./codePreview";
 
 export default {
-  name: 'demo-doc',
-  components: {CodePreview},
+  name: "demo",
+  components: {
+    CodePreview,
+  },
   props: {
     title: {
       type: String,
-      default: '组件功能'
+      default: "组件功能",
     },
     description: {
       type: String,
-      default: '组件功能描述'
+      default: "组件功能描述",
     },
     component: {
-      type: Object
+      type: Object,
+    },
+    code:{
+      type:String
     }
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .demo-container {
-  //padding: 40px;
+  margin-bottom: 50px;
   h2 {
     font-weight: 400;
     color: #1f2f3d;
-    font-size: 22px;
-    margin: 55px 0 20px;
+    font-size: 20px;
+    padding: 0.8em 0;
   }
-
   p {
     font-size: 14px;
     color: #5e6d82;
-    line-height: 1.5em;
-    margin: 14px 0;
+    padding: 0.8em 0;
   }
 }
 </style>

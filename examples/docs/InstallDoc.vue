@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import 'prismjs/prism.js'
-import 'prismjs/themes/prism-okaidia.css'
 export default {
   components: {
   },

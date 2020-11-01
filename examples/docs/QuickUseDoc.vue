@@ -36,7 +36,6 @@ new Vue({
 </template>
 
 <script>
-import "prismjs/themes/prism-okaidia.css";
 export default {
   mounted() {
      process.browser &&document.querySelectorAll("pre code").forEach(block => Prism.highlightElement(block));

@@ -18,7 +18,7 @@
         </ul>
       </div>
       <div class="article">
-        <router-view></router-view>
+        <router-view class="routerView"></router-view>
       </div>
     </div>
   </div>
@@ -70,10 +70,13 @@ export default {
     }
     .article {
       width: 100%;
-      padding: 25px;
+      padding: 50px;
       overflow: scroll;
       overflow-x: hidden;
       box-shadow: inset 0 5px 5px rgb(247, 247, 247);
+      .routerView{
+        max-width: 800px;
+      }
     }
   }
 }

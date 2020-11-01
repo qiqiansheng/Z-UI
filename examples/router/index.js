@@ -20,6 +20,7 @@ const routes = [
   {
     path: '/Doc',
     component: Doc,
+    redirect: '/Doc/InstallDoc',
     children: [
     {
       path: 'ButtonDoc',

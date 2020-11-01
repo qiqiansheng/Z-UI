@@ -21,7 +21,7 @@ export default {
     // 按钮类型
     type: {
       type: String,
-      default: "",
+      default: "normal",
     },
     // 圆角
     round: {
@@ -37,7 +37,7 @@ export default {
   methods: {
     colorChange(type) {
       switch (type) {
-        case '':
+        case 'normal':
           this.$refs.button.style.borderColor = 'rgb(58,142,230)'
           break;
         case "primary":
@@ -59,7 +59,7 @@ export default {
     },
     colorResume(type) {
       switch (type) {
-        case '':
+        case 'normal':
           this.$refs.button.style.borderColor = 'rgb(220, 223, 230)'
           break;
         case "primary":
