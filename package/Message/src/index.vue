@@ -48,6 +48,7 @@ export default {
   position: fixed;
   top: 20px;
   left: 50%;
+  z-index: 999;
   transform: translateX(-50%);
 }
 .info {

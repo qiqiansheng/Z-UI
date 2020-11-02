@@ -5,7 +5,7 @@
     </div>
     <div class="per-wrapper">
       <transition name="code">
-        <div class="per-content" v-show="showCode">
+        <div class="per-content" :style="{'height':height+'px'}">
           <pre ref="codePer" :class="codetype"><code :class="codetype">{{code}}</code></pre>
         </div>
       </transition>
@@ -29,16 +29,21 @@ export default {
     codetype:{
       type:String
     }
-    
   },
   data() {
     return {
       showCode:false,
+      height:0
     }
   },
   methods: {
     toggle() {
       this.showCode = !this.showCode
+      if(this.height){
+        this.height = 0
+      }else{
+        this.height = this.$refs.codePer.clientHeight
+      }
     }
   },
   mounted() {
@@ -66,6 +71,8 @@ export default {
   .per-content {
     background-color: #fafafa;
     border-top: 1px solid #eaeefb;
+    height: 0;
+    transition: all .2s;
   }
 
   .demo-block-control {
@@ -92,19 +99,5 @@ export default {
       transform: translateX(-30px);
     }
   }
-}
-
-.code-enter-active,
-.code-leave-active{
-  transition: all .3s linear;
-}
-.code-enter-to,
-.code-leave{
-  height: 200px;
-}
-
-.code-enter,
-.code-leave-to {
-  height: 0;
 }
 </style>

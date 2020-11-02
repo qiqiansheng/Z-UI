@@ -21,5 +21,6 @@ export default {
 }
 .item{
   margin-right: .8em;
+  margin-bottom: .8em;
 }
 </style>
